@@ -1,0 +1,69 @@
+{%extends "base_pgus.html" %}
+{%block title%}Application Form{%endblock%}
+{%block layoutblock%}
+<!-- Application Form -->
+
+<form action="" method="POST" role="form">
+    <legend>Form title</legend>
+
+    <div class="form-group">
+        <label for="firstname">First Name</label>
+        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="">
+    </div>
+    
+    <div class="form-group">
+        <label for="lastname">Last Name</label>
+        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="">
+    </div>
+    
+    <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="">
+    </div>
+    
+    <div class="form-group">
+        <label for="cemail">Confirm Email Address</label>
+        <input type="text" class="form-control" id="cemail" name="cemail" placeholder="">
+    </div>
+
+    <div class="form-group">
+        <label for="interestedevent">Which event and dates are you interested in attending? e.g. PGCONF US, PostgresOpen, etc.</label>
+        <textarea class="form-control rounded-0" id="interestedevent" rows="3"></textarea>
+    </div>
+
+
+    <div class="form-group">
+        <label for="attend">Why do you want to attend this conference? Explain how attending this event will benefit you, and how you plan to "pay it forward" in the community (PUG presentation, blog post, etc.)</label>
+        <input type="text" class="form-control" id="attend" name="attend" placeholder="">
+    </div>
+    
+    <div class="radio">
+        <label>
+            Are you seeking a comp conference ticket? (Note that comps are handled directly with the conference; paid trainings are separate from conference and not eligible)
+        </label>
+        <input type="radio" name="ticket" id="input" value="Yes" checked="checked">
+        <input type="radio" name="ticket" id="input" value="No">
+    </div>
+    
+    <div class="radio">
+        <label>
+                Are you a member on an under-represented group?
+        </label>
+        <input type="radio" name="member" id="input" value="Yes" checked="checked">
+        <input type="radio" name="member" id="input" value="No">
+    </div>
+
+    <div class="form-group">
+        <label for="">How much (if any) additional financial aid do you need? (Hotel, flight, etc.) Please research and provide an estimate of flight and hotel costs.</label>
+        <input type="text" class="form-control" id="" placeholder="">
+    </div>
+
+    <div class="form-group">
+        <label for="additionalInfo">Additional information and comments?</label>
+        <textarea class="form-control rounded-0" id="additionalInfo" rows="3"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{%endblock%}

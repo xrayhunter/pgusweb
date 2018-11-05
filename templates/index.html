@@ -1,5 +1,5 @@
 {%extends "base_pgus.html" %}
-{%load markup%}
+
 {%block title%}Welcome{%endblock%}
 {%block layoutblock%}
 
@@ -65,7 +65,7 @@
             <h3>{{news.0.title}}</h3>
           </header>
           <p>
-            {{news.0.summary|markdown|truncatewords:50}}
+            {{news.0.summary|markdown|truncate(50)}}
           </p>
           <footer>
             <a href="/news" class="button special">More</a>
